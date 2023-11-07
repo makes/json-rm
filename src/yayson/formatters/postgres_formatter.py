@@ -13,15 +13,23 @@ typecast_map = {
 class PostgresFormatter():
     db_object_types = {'view': 'VIEW', 'mview': 'MATERIALIZED VIEW', 'table': 'TABLE'}
 
-    def __init__(self, table, column, obj_type='view', drop=False, extra_cols=[]):
+    def __init__(self, table, column,
+                 obj_type='view',
+                 root_relation_name='root',
+                 drop=False,
+                 extra_cols=[]):
         self._table = table
         self._column = column
         self._obj_type = obj_type
+        self._root_relation_name = root_relation_name
         self._drop = drop
         self._extra_cols = extra_cols
 
     def _format_name(self, name):
-        return self._truncate_identifier('.'.join(name))
+        name_str = '.'.join(name)
+        if not name:
+            name_str = self._root_relation_name
+        return self._truncate_identifier(name_str)
 
     def _truncate_identifier(self, identifier):
         while len(identifier) > PG_MAX_IDENTIFIER_LENGTH:
@@ -37,8 +45,8 @@ class PostgresFormatter():
         enclosing_attr = entity.enclosing_attr
         ret = ""
         name = self._format_name(entity.name)
-        if not entity.name:
-            name = self._format_name("_root_") # todo: parametrize name of root relation
+        #if not entity.name:
+        #    name = self._format_name([self._root_relation_name])
         _type = PostgresFormatter.db_object_types[self._obj_type]
         if self._drop:
             ret += f'DROP {_type} IF EXISTS "{name}" CASCADE;\n'
