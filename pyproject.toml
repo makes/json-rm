@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "json-rm"
 version = "0.0.1"
 authors = [{name="makes"}]
-description = "Transpile JSON schemas into other textual representations."
+description = "Parse JSON Schemas into relational model and transpile into other textual representations."
 readme = "README.md"
 dependencies = ["jsonref", "typer"]
 requires-python = ">=3.9"

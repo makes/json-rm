@@ -1,7 +1,13 @@
 json-rm
 =======
 
-Parse JSON Schemas into relational model and transpile into other textual representations.
+This tool parses a JSON Schema into "Entities" and "Attributes", which correspond to tables and columns in a relational database. It can be used to output different representations of the data model described by the input schema.
+
+## Installation
+
+```
+pip install json-rm
+```
 
 ## Command line usage
 
@@ -35,3 +41,11 @@ formatter = SimpleFormatter()
 print(schema.render(formatter))
 ```
 
+## Parsing options
+
+### normalization
+
+- Denormalized (default) mode results in a flat structure with less tables.
+- Normalized mode results in a deep structure with more tables.
+
+When `normalization` is set to `False` (default), the parser operates in "denormalized" mode, creating a new `Entity` only for the root object and repeating (`array`) objects. In the "normalized mode, a separate `Entity` is created for each nested structure (JSON objects and arrays).
