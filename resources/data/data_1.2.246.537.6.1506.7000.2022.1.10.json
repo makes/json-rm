@@ -1,0 +1,109 @@
+{
+  "adoptioneuvonnan_lausunto": {
+    "vastaanottaja": {
+      "organisaation_nimi": "velit cillum ut proident",
+      "yhteyshenkilo": {
+        "sukunimi": "sint est ea",
+        "etunimet": "consequat dolor cupidatat minim"
+      }
+    },
+    "asiakas": [
+      {
+        "sukunimi": "ipsum elit mollit",
+        "etunimet": "occaecat",
+        "henkilotunnus": {
+          "value": "deserunt veniam velit minim eu",
+          "system": "fugiat enim"
+        },
+        "tilapainen_yksilointitunnus": {
+          "value": "veniam nisi aliquip cillum",
+          "system": "tempor aliqua occaecat velit veniam"
+        }
+      },
+      {
+        "sukunimi": "ex commodo est minim Lorem",
+        "etunimet": "tempor enim fugiat sed",
+        "tilapainen_yksilointitunnus": {
+          "value": "in Lorem laboris officia dolore",
+          "system": "et Lorem sint"
+        }
+      },
+      {
+        "sukunimi": "reprehenderit in et labore",
+        "etunimet": "occaecat incididunt Duis dolor",
+        "tilapainen_yksilointitunnus": {
+          "value": "nisi nostrud laborum",
+          "system": "Lorem"
+        },
+        "henkilotunnus": {
+          "value": "et dolore",
+          "system": "eiusmod in"
+        }
+      },
+      {
+        "sukunimi": "sunt",
+        "etunimet": "quis in dolore eiusmod voluptate",
+        "henkilotunnus": {
+          "value": "velit ullamco do",
+          "system": "cillum aliqua officia"
+        },
+        "tilapainen_yksilointitunnus": {
+          "value": "Lorem dolore",
+          "system": "consectetur"
+        }
+      },
+      {
+        "sukunimi": "proident sint consequat Ut",
+        "etunimet": "cupidatat voluptate",
+        "henkilotunnus": {
+          "value": "aute et amet sunt",
+          "system": "et nostrud proident do eiusmod"
+        },
+        "tilapainen_yksilointitunnus": {
+          "value": "sunt sed consequat nulla laboris",
+          "system": "in do sit irure"
+        }
+      }
+    ],
+    "lausunto": {
+      "asiasisalto": "qui",
+      "lausunnon_tarkoitus": "deserunt qui ipsum"
+    },
+    "laatija": [
+      {
+        "sukunimi": "cupidatat ex nostrud exercitation",
+        "etunimet": "dolor nulla aute nisi veniam"
+      },
+      {
+        "sukunimi": "cillum laboris",
+        "etunimet": "do sunt non Lorem magna"
+      },
+      {
+        "sukunimi": "irure Excepteur id",
+        "etunimet": "ut",
+        "palveluyksikko": {
+          "system": "urn:oid:1.2.246.537.6.202.91485.98868.9123",
+          "code": "anim enim ea",
+          "display": "nisi"
+        }
+      },
+      {
+        "sukunimi": "id",
+        "etunimet": "magna fugiat est"
+      }
+    ],
+    "lisatiedot": "exercitation veniam et in",
+    "allekirjoitus": {
+      "allekirjoitus": "est do",
+      "paikka": "ut fugiat aliquip ea commodo",
+      "ajankohta": "0926",
+      "allekirjoituksen_tyyppi": {
+        "system": "urn:oid:1.2.246.537.5.40161.6.580954868.069658.6988.58013489070.733023037.78888436.30.294",
+        "code": "est ad sed ex tempor",
+        "display": "ad"
+      },
+      "nimi": "proident deserunt"
+    },
+    "lakiselostus": "eu consectetur Duis"
+  }
+}
