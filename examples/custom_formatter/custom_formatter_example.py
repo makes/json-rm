@@ -1,8 +1,8 @@
-import yayson
+import json_rm
 
 SCHEMAFILE = "../../resources/schemas/1.2.246.537.6.1506.7000.2022.1.10.json"
 
-schema = yayson.JSONSchema.from_file(SCHEMAFILE, normalization=True)
+schema = json_rm.JSONSchema.from_file(SCHEMAFILE, normalization=True)
 
 class CustomFormatter():
     def __init__(self):

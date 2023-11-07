@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "yayson"
+name = "json-rm"
 version = "0.0.1"
 authors = [{name="makes"}]
 description = "Transpile JSON schemas into other textual representations."
@@ -12,8 +12,8 @@ dependencies = ["jsonref", "typer"]
 requires-python = ">=3.9"
 
 [project.scripts]
-jst = "yayson.cli:main"
+jst = "json_rm.cli:main"
 
 [project.urls]
-"Homepage" = "https://github.com/makes/json-schema-transcriber"
-"Bug Tracker" = "https://github.com/makes/json-schema-transcriber/issues"
+"Homepage" = "https://github.com/makes/json-rm"
+"Bug Tracker" = "https://github.com/makes/json-rm/issues"

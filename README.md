@@ -1,7 +1,7 @@
-yayson
-======
+json-rm
+=======
 
-Transpile JSON schemas into other textual representations.
+Parse JSON Schemas into relational model and transpile into other textual representations.
 
 ## Command line usage
 
@@ -26,10 +26,10 @@ $ jst postgres resources/schemas/1.2.246.537.6.1506.7000.2022.1.10.json
 ## Using from your Python code
 
 ```
-import yayson
-from yayson.formatters import SimpleFormatter
+import json_rm
+from json_rm.formatters import SimpleFormatter
 
-schema = yayson.JSONSchema.from_file("schema.json")
+schema = json_rm.JSONSchema.from_file("schema.json")
 formatter = SimpleFormatter()
 
 print(schema.render(formatter))
