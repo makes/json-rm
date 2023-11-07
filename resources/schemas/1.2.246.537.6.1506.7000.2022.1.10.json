@@ -1,0 +1,1002 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Adoptioneuvonnan lausunto\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Adoptioneuvonnan lausunto\u0027 JSON schema",
+    "status": "Testiss�",
+    "documentDefinitionVersion": "2022-01-10",
+    "dataComponentLibraryVersion": "2022-01-10R2",
+    "oid": "1.2.246.537.6.1506.7000.2022.1.10",
+    "documentType": "Lausunto",
+    "documentAuthor": "ammattihenkil�",
+    "documentSubject": "Adoptioneuvonnan asiakasasiakirjat"
+  },
+  "required": [
+    "adoptioneuvonnan_lausunto"
+  ],
+  "properties": {
+    "adoptioneuvonnan_lausunto": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Adoptioneuvonnan lausunto"
+          }
+        ],
+        "description": [
+          {
+            "lang": "fi",
+            "value": "adoptioneuvontaa antavan sosiaality�ntekij�n lausunto n�kemyksest��n yksitt�isess� adoption vahvistamiseen liittyv�ss� asiassa\nT�m� lausunto voidaan antaa esimerkiksi tuomioistuimelle, adoptiolautakunnalle tai toiselle kunnalle."
+          }
+        ]
+      },
+      "required": [
+        "vastaanottaja",
+        "asiakas",
+        "lausunto",
+        "laatija"
+      ],
+      "properties": {
+        "vastaanottaja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Vastaanottaja"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false
+          },
+          "required": [
+            "organisaation_nimi"
+          ],
+          "properties": {
+            "organisaation_nimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Organisaation nimi"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            },
+            "yhteystiedot": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteystiedot"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              },
+              "required": [],
+              "properties": {
+                "osoite": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Osoite"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false
+                  },
+                  "required": [],
+                  "properties": {
+                    "lahiosoite": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "L�hiosoite"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Teksti"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false
+                      }
+                    },
+                    "postinumero": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Postinumero"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Teksti"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false
+                      }
+                    },
+                    "postitoimipaikka": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Postitoimipaikka"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Nimi"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "yhteyshenkilo": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteyshenkil�"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              },
+              "required": [
+                "sukunimi",
+                "etunimet"
+              ],
+              "properties": {
+                "sukunimi": {
+                  "type": "string",
+                  "minLength": 1,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sukunimi"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Nimi"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": true,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false
+                  }
+                },
+                "etunimet": {
+                  "type": "string",
+                  "minLength": 1,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Etunimet"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Nimi"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": true,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                }
+              ],
+              "example": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkil�tunnus"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkil�tunnus- ja Tilap�inen yksil�intitunnus -kentist� toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "tilapainen_yksilointitunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tilap�inen yksil�intitunnus"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "112233-445a"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkil�tunnus- ja Tilap�inen yksil�intitunnus -kentist� toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "lausunto": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lausunto"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false
+          },
+          "required": [
+            "asiasisalto"
+          ],
+          "properties": {
+            "lausunnon_tarkoitus": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lausunnon tarkoitus"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuvaus mit� tarkoitusta varten ja mill� perusteella lausunto annetaan"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            },
+            "asiasisalto": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiasis�lt�"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            }
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lis�tiedot"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kent�ss� voidaan k�ytt�� automaattiteksti�, jonka organisaatio yhdess� tietoj�rjestelm�toimittajan kanssa laatii. THL ei laadi kent�ss� n�ytett�vi� tekstej�."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Teht�v�nimike"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikk�"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "allekirjoitus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Allekirjoitus"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false
+          },
+          "required": [],
+          "properties": {
+            "paikka": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Paikka"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Helsinki"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            },
+            "ajankohta": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ajankohta"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "29.05.2020"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Hetki"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            },
+            "allekirjoituksen_tyyppi": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Allekirjoituksen tyyppi"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "1 \u003d Asiakirja on allekirjoitettu s�hk�isesti"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: eArkisto - Allekirjoitus 1.2.246.537.5.40161"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d252\u0026versionKey\u003d329"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.5.40161"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.5\\.40161(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "allekirjoitus": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Allekirjoitus"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Allekirjoitus"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            },
+            "nimi": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
