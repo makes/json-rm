@@ -14,6 +14,12 @@ def postgres(input: str):
     print(schema.render(pg_formatter))
 
 @main.command()
+def spark(input: str):
+    schema = JSONSchema.from_file(input, normalization=True)
+    spark_formatter = formatters.SparkFormatter()
+    print(schema.render(spark_formatter))
+
+@main.command()
 def simple(input: str):
     schema = JSONSchema.from_file(input)
     simple_formatter = formatters.SimpleFormatter()

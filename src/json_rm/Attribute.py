@@ -1,15 +1,22 @@
 class Attribute:
-    def __init__(self, name, path, dtype, member_of_entity, metadata):
-        self._name = name
+    def __init__(self, subpath, path, dtype, member_of_entity, metadata):
+        self._subpath = subpath
         self._path = path
         self._dtype = dtype
         self._member_of_entity = member_of_entity
         self._metadata = metadata
         self._child_entity = None
 
+    def __str__(self):
+        return f'{self._dtype} {self.name}'
+
     @property
     def name(self):
-        return self._name
+        return self._subpath[-1]
+
+    @property
+    def subpath(self):
+        return tuple(self._subpath)
 
     @property
     def path(self):
@@ -35,6 +42,6 @@ class Attribute:
     def child_entity(self, entity):
         self._child_entity = entity
 
-    def render(self, formatter):
-        return formatter.format_attribute(self)
+    #def render(self, formatter):
+    #    return formatter.format_attribute(self)
 
